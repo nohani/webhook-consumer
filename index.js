@@ -6,21 +6,14 @@ const bodyParser = require("body-parser")
 const app = express()
 const PORT = 3000
 
+// Parse your posted data as JSON on any URL path
 app.use(bodyParser.json())
-
-
-// Creating a custom parser to add a content type header to the request so that the data 
-// can be parsed as JSON
-// const jsonHeader = bodyParser.json({type: (req) => {
-//     return req.headers['content-type'] = 'application/json'
-// }})
 
 app.post("/hook", (req, res) => {
      // Call your action on the request here
-     console.log(req.headers);
      console.log(req.body);
 
-     //Responding to the server is important
+     //Acknowledge receipt of data from your webhook with a 200 status code
      res.status(200).end()
 })
 
