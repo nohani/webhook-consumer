@@ -6,7 +6,7 @@ For this reason, I have created a simple webhook consumer for callback handling 
 
 To get this example working, please do the following:
 1. Clone this repository onto your computer in your selected directory.
-2. Navigate to the cloned repository's folder (on your local machine) in your terminal and type in `npm install` or `npm i` for short. This should
+2. Navigate to the cloned repository's folder in your terminal and type in `npm install` or `npm i` for short. This should
 download all of the packages in package.json.
 3. Replace the API_Endpoint in callback_test.js with the callback URL that you would like our webhook to send the POST request to. Since in this case we are using our own local server, we must expose the port index.js is running on to the internet. To do this, I used ngrok.
     * You may use another tool if you so wish, but I will continue to use ngrok in this example. Please see [here](https://ngrok.com/download) to see how to get ngrok installed.
