@@ -1,13 +1,12 @@
 // Require express and body-parser
 const express = require("express")
-const bodyParser = require("body-parser")
 
 // Initialize express and define a port
 const app = express()
 const PORT = 3000
 
 // Parse your posted data as JSON on any URL path
-app.use(bodyParser.json())
+app.use(express.json())
 
 app.post("/hook", (req, res) => {
      // Call your action on the request here
